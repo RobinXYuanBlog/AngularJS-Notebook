@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Email">
+<head>
+    <meta charset="UTF-8">
+    <title>Email</title>
+    <script src="../libs/angular.min.js"></script>
+    <script src="email.js"></script>
+    <link type="text/css" rel="stylesheet" href="../libs/bootstrap.min.css">
+    <style>
+        #emailEditor {
+            width: 20vw;
+            margin: 10px;
+        }
+
+        input {
+            width: 10em;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+
+<div id="emailEditor" ng-controller="EmailController">
+    To: <input class="form-control" ng-model="to" type="email" placeholder="Recipient">
+    <br/>
+    <textarea class="form-control" ng-model="emailBody"></textarea>
+    <br/>
+    <pre id="emailPreview">__ previewText __</pre>
+</div>
+
+</body>
+</html>

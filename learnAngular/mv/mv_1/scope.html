@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Scope">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope</title>
+    <script src="../../libs/angular.min.js"></script>
+    <script src="scope.js"></script>
+</head>
+<body>
+
+<div ng-controller="Aaa">
+    <p>{{ name }}</p>
+    <p>{{ age }}</p>
+</div>
+
+<div ng-controller="Bbb">
+    <p>{{ name }}</p>
+    <p>{{ age }}</p>
+</div>
+
+<!--嵌套，子级无，找父级-->
+<div ng-controller="Aaa">
+    {{ name }}
+    <div ng-controller="Bbb">
+        {{ age }}
+    </div>
+</div>
+
+<div ng-controller="Ccc">
+    {{ name }}
+</div>
+
+</body>
+</html>

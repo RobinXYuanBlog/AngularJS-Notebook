@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Hierachy">
+<head>
+    <meta charset="UTF-8">
+    <title>Hierachy</title>
+    <script src="../libs/angular.min.js"></script>
+    <script src="hierachy.js"></script>
+    <link type="text/css" rel="stylesheet" href="../libs/bootstrap.min.css">
+</head>
+<body>
+
+<div ng-controller="ParentController">
+    <div ng-controller="ChildController">
+        <a class="btn btn-default" ng-click="sayHello()">
+            Say Hello
+        </a>
+    </div>
+    <p>Name: {{ person.name }}</p>
+    <p>Greeted: {{ person.greeted }}</p>
+    {{ person }}
+</div>
+
+</body>
+</html>
